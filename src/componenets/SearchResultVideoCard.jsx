@@ -27,6 +27,7 @@ const SearchResultVideoCard = ({video}) => {
                 <div className="flex items-start mr-3">
                     <div className="flex h-9 w-9 rounded-full overflow-hidden">
                         <img
+                        loading="lazy"
                             className="h-full w-full object-cover"
                             src={video?.author?.avatar[0]?.url}
                         />

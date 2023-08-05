@@ -23,6 +23,7 @@ function HeaderComp() {
       (event === "searchButton" && searchQuery?.length > 0)
     ) {
       navigate(`/searchResult/${searchQuery}`);
+   
     }
   };
   const mobileMenuToggle = () => {

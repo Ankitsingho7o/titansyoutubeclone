@@ -1,16 +1,23 @@
 import React from "react";
 import { useContext, useEffect, useRef, useCallback } from "react";
+import { Navigate, useNavigate } from "react-router-dom";
 import { Context } from "../context/contextApi";
 import LeftNav from "../componenets/LeftNav";
 import VideoCard from "./VideoCard";
 function FeedComp() {
-  const { loading, searchResults,checking} =
+  const { loading, searchResults, limitexcdeed} =
     useContext(Context);
-  console.log(searchResults);
+  const naviagte = useNavigate()
   useEffect(() => {
     document.getElementById("root").classList.remove("custom-h");
   });
 
+ useEffect(()=>{
+  if(limitexcdeed){
+
+    naviagte(`/limitexceeded`)
+  }
+ },[limitexcdeed])
   // Pagination
   // const observer = useRef();
 

@@ -23,6 +23,7 @@ const CommentComp = ({ videoComments }) => {
             <div className="flex gap-4 w-full">
               <div className="flex h-8 w-8 md:h-10 md:w-10 rounded-full  overflow-hidden">
                 <img
+                loading="lazy"
                   className="h-full  object-cover "
                   src={item?.author?.avatar[0]?.url}
                 />
